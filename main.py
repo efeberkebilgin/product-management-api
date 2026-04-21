@@ -36,7 +36,7 @@ class UrunCikti(Urun):
     id: int
 
 # -------------------------------
-# VALIDATION (EKLENDİ)
+# VALIDATION 
 # -------------------------------
 def fiyat_kontrol(fiyat: float):
     if fiyat <= 0:
@@ -87,7 +87,7 @@ def urunleri_listele():
         connected.close()
 
 # -------------------------------
-# ÜRÜN SİL (YENİ)
+# ÜRÜN SİL 
 # -------------------------------
 @app.delete("/urun/{id}")
 def urun_sil(id: int):
@@ -108,7 +108,7 @@ def urun_sil(id: int):
     return {"message": "Ürün silindi"}
 
 # -------------------------------
-# ÜRÜN GÜNCELLE (YENİ)
+# ÜRÜN GÜNCELLE 
 # -------------------------------
 @app.put("/urun/{id}")
 def urun_guncelle(id: int, urun: Urun):
